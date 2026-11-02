@@ -1,0 +1,6 @@
+{
+  "name": "PySnake",
+  "description": "Master Python coding exercises and recharge with the built-in arcade Snake game break feature.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
