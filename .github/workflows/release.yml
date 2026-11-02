@@ -2,8 +2,15 @@ name: Build and Release APK
 
 on:
   push:
+    branches:
+      - main
+      - master
     tags:
       - 'v*'
+  pull_request:
+    branches:
+      - main
+      - master
   workflow_dispatch:
 
 jobs:
@@ -39,6 +46,15 @@ jobs:
       - name: Build Debug APK
         run: gradle assembleDebug
 
+      # Upload the built APK as a workflow artifact downloadable from the Actions tab
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pysnake-app-debug
+          path: app/build/outputs/apk/debug/*.apk
+          retention-days: 7
+
+      # Automatically publish to GitHub Releases when a tag is pushed (e.g. v1.0.0)
       - name: Upload APK to GitHub Release
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
