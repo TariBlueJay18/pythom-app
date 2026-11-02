@@ -28,11 +28,11 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Code
 import androidx.compose.material.icons.filled.EmojiEvents
 import androidx.compose.material.icons.filled.KeyboardArrowDown
-import androidx.compose.material.icons.filled.KeyboardArrowLeft
-import androidx.compose.material.icons.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.filled.PlayArrow
@@ -675,7 +675,7 @@ fun SnakeGameScreen(
                         .size(48.dp)
                         .testTag("dpad_left")
                 ) {
-                    Icon(Icons.Default.KeyboardArrowLeft, contentDescription = "Left", tint = TextPrimary, modifier = Modifier.size(28.dp))
+                    Icon(Icons.AutoMirrored.Filled.KeyboardArrowLeft, contentDescription = "Left", tint = TextPrimary, modifier = Modifier.size(28.dp))
                 }
 
                 // RIGHT
@@ -687,7 +687,7 @@ fun SnakeGameScreen(
                         .size(48.dp)
                         .testTag("dpad_right")
                 ) {
-                    Icon(Icons.Default.KeyboardArrowRight, contentDescription = "Right", tint = TextPrimary, modifier = Modifier.size(28.dp))
+                    Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, contentDescription = "Right", tint = TextPrimary, modifier = Modifier.size(28.dp))
                 }
 
                 // Center Action (Pause / Start)
